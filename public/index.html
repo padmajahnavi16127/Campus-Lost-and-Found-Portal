@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h2>Campus<span>Find</span></h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#items">Lost & Found</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="nav-btn">Register</a>
+            <a href="report.html">Report Item</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <p class="tagline">CAMPUS LOST & FOUND PORTAL</p>
+
+            <h1>
+                Lost Something?<br>
+                <span>Let's Find It.</span>
+            </h1>
+
+            <p class="hero-text">
+                A simple platform to report lost items,
+                discover found belongings and reconnect
+                students with their valuable possessions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="report.html" class="btn primary">
+                    Report an Item
+                </a>
+
+                <a href="#items" class="btn secondary">
+                    Browse Items
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lost and Found Items Section -->
+    <section class="items-section" id="items">
+
+        <p class="tagline">CAMPUS COMMUNITY</p>
+
+        <h2>Recently Reported Items</h2>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search items by name..."
+            >
+
+            <select id="typeFilter">
+                <option value="">All Items</option>
+                <option value="Lost">Lost Items</option>
+                <option value="Found">Found Items</option>
+            </select>
+
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Documents">Documents</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Books">Books</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input
+                type="text"
+                id="locationFilter"
+                placeholder="Filter by location..."
+            >
+
+            <!-- Date Sorting -->
+            <select id="dateSort">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+
+        </div>
+
+        <!-- Items Display -->
+        <div id="itemsList" class="items-grid">
+            <p>Loading items...</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 CampusFind | Campus Lost & Found Portal</p>
+    </footer>
+
+    <script src="js/home.js"></script>
+
+</body>
+</html>

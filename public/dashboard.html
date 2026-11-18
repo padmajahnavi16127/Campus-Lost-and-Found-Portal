@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Campus<span>Find</span></h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Item</a>
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <section class="items-section">
+
+        <p class="tagline">STUDENT ACCOUNT</p>
+
+        <h2>My Dashboard</h2>
+
+        <p id="welcomeMessage">
+            Welcome to your dashboard!
+        </p>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="lostCount">0</h3>
+                <p>Lost Items</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="foundCount">0</h3>
+                <p>Found Items</p>
+            </div>
+        </div>
+
+        <h2 class="dashboard-heading">My Reported Items</h2>
+
+        <div id="myItemsList" class="items-grid">
+            <p>Loading your reports...</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 CampusFind | Campus Lost & Found Portal</p>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

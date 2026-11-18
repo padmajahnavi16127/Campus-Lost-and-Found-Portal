@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Item - CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>CampusFind</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-card">
+
+            <h1>Claim an Item</h1>
+            <p>Enter your details to claim a found item.</p>
+
+            <form id="claimForm">
+
+                <label>Item ID</label>
+                <input
+                    type="text"
+                    id="itemId"
+                    required
+                    placeholder="Enter item ID"
+                >
+
+                <label>Why are you claiming this item?</label>
+                <textarea
+                    id="message"
+                    required
+                    placeholder="Describe the item or explain why it belongs to you"
+                ></textarea>
+
+                <label>Contact Details</label>
+                <input
+                    type="text"
+                    id="contact"
+                    required
+                    placeholder="Enter your phone number or email"
+                >
+
+                <button type="submit" class="auth-btn">
+                    Submit Claim
+                </button>
+
+            </form>
+
+            <p id="claimMessage"></p>
+
+        </div>
+    </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = urlParams.get("itemId");
+
+        if (itemId) {
+            document.getElementById("itemId").value = itemId;
+        }
+    </script>
+
+    <script src="js/claim.js"></script>
+
+</body>
+</html>

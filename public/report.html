@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Item | CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Campus<span>Find</span></h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Item</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="auth-section">
+
+        <div class="auth-card report-card">
+
+            <h1>Report an Item</h1>
+
+            <p>Help your campus community find lost belongings.</p>
+
+            <form id="reportForm">
+
+                <label>Item Name</label>
+                <input type="text" id="itemName"
+                    placeholder="Example: Black Wallet" required>
+
+                <label>Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Books">Books</option>
+                    <option value="Documents">Documents</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Description</label>
+                <textarea id="description"
+                    placeholder="Describe the item..."
+                    rows="4" required></textarea>
+
+                <label>Location</label>
+                <input type="text" id="location"
+                    placeholder="Where was it lost or found?" required>
+
+                <label>Date</label>
+                <input type="date" id="date" required>
+
+                <label>Report Type</label>
+                <select id="type" required>
+                    <option value="">Select Type</option>
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                </select>
+
+                <label>Upload Item Image</label>
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                >
+
+                <button type="submit" class="auth-btn">
+                    Submit Report
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="js/report.js"></script>
+
+</body>
+</html>
